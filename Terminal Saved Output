@@ -1,0 +1,255 @@
+Last login: Thu Dec  4 15:27:10 on ttys000
+Aishas-MacBook-Pro:~ aishajackson$ cd documents
+Aishas-MacBook-Pro:documents aishajackson$ cd ComputerScience
+Aishas-MacBook-Pro:ComputerScience aishajackson$ cd ThirdYear
+Aishas-MacBook-Pro:ThirdYear aishajackson$ cd CIS346
+Aishas-MacBook-Pro:CIS346 aishajackson$ g++ test2.cpp -o te
+Aishas-MacBook-Pro:CIS346 aishajackson$ ./te
+Welcome to our airlines! This airline implements Floyd's All Points Shortest
+Paths Algorithm. Below we have a matrix that provides the distances from city
+to city. Check out which cities you could like to travel to & book your
+flight now!
+
+ORIGINAL MATRIX: 
+0  ~  ~ 663  ~  ~  ~  ~  ~ 475  ~  ~  ~  ~  ~ 
+ ~ 0  ~  ~  ~ 1780 1423  ~  ~ 948  ~  ~  ~ 2060  ~ 
+ ~  ~ 0  ~ 1440  ~  ~ 949  ~ 517 1614  ~  ~  ~  ~ 
+663  ~  ~ 0  ~  ~  ~  ~ 811  ~ 237  ~  ~  ~  ~ 
+ ~  ~ 1440  ~ 0 272  ~  ~  ~  ~  ~  ~  ~  ~ 414 
+ ~ 1780  ~  ~ 272 0  ~  ~  ~  ~  ~  ~  ~  ~  ~ 
+ ~ 1423  ~  ~  ~  ~ 0  ~  ~  ~  ~  ~  ~  ~  ~ 
+ ~  ~ 949  ~  ~  ~  ~ 0  ~  ~ 1217 792  ~  ~  ~ 
+ ~  ~  ~ 811  ~  ~  ~  ~ 0  ~  ~  ~ 1771  ~ 2257 
+475 948 517  ~  ~  ~  ~  ~  ~ 0  ~  ~  ~  ~  ~ 
+ ~  ~ 1614 237  ~  ~  ~ 1217  ~  ~ 0  ~  ~  ~  ~ 
+ ~  ~  ~  ~  ~  ~  ~ 792  ~  ~  ~ 0  ~  ~  ~ 
+ ~  ~  ~  ~  ~  ~  ~ 1771  ~  ~  ~  ~ 0  ~  ~ 
+ ~ 2060  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~ 0 804 
+ ~  ~  ~  ~ 414  ~  ~  ~ 2257  ~  ~  ~  ~ 804 0 
+
+From ATL to ATL: -------------------- 
+From ATL to CHI: ATL->NOLA->CHI Miles: 1423
+From ATL to DA: ATL->NOLA->DA Miles: 992
+From ATL to DC: ATL->DC Miles: 663
+From ATL to LA: ATL->NOLA->DA->LA Miles: 2432
+From ATL to LV: ATL->NOLA->DA->LA->LV Miles: 2704
+From ATL to MIA: ATL->NOLA->CHI->MIA Miles: 2846
+From ATL to MP: ATL->NOLA->DA->MP Miles: 1941
+From ATL to MWK: ATL->DC->MWK Miles: 1474
+From ATL to NOLA: ATL->NOLA Miles: 475
+From ATL to NY: ATL->DC->NY Miles: 900
+From ATL to OKC: ATL->NOLA->DA->MP->OKC Miles: 2733
+From ATL to PHO: ATL->DC->MWK->PHO Miles: 3245
+From ATL to SE: ATL->NOLA->CHI->SE Miles: 3483
+From ATL to SF: ATL->NOLA->DA->LA->SF Miles: 2846
+From CHI to ATL: CHI->NOLA->ATL Miles: 1423
+From CHI to CHI: -------------------- 
+From CHI to DA: CHI->NOLA->DA Miles: 1465
+From CHI to DC: CHI->NOLA->DC Miles: 2086
+From CHI to LA: CHI->LV->LA Miles: 2052
+From CHI to LV: CHI->LV Miles: 1780
+From CHI to MIA: CHI->MIA Miles: 1423
+From CHI to MP: CHI->NOLA->DA->MP Miles: 2414
+From CHI to MWK: CHI->NOLA->DC->MWK Miles: 2897
+From CHI to NOLA: CHI->NOLA Miles: 948
+From CHI to NY: CHI->NOLA->DC->NY Miles: 2323
+From CHI to OKC: CHI->NOLA->DA->MP->OKC Miles: 3206
+From CHI to PHO: CHI->NOLA->DC->MWK->PHO Miles: 4668
+From CHI to SE: CHI->SE Miles: 2060
+From CHI to SF: CHI->LV->LA->SF Miles: 2466
+From DA to ATL: DA->NOLA->ATL Miles: 992
+From DA to CHI: DA->NOLA->CHI Miles: 1465
+From DA to DA: -------------------- 
+From DA to DC: DA->NOLA->DC Miles: 1655
+From DA to LA: DA->LA Miles: 1440
+From DA to LV: DA->LA->LV Miles: 1712
+From DA to MIA: DA->NOLA->CHI->MIA Miles: 2888
+From DA to MP: DA->MP Miles: 949
+From DA to MWK: DA->NOLA->DC->MWK Miles: 2466
+From DA to NOLA: DA->NOLA Miles: 517
+From DA to NY: DA->NY Miles: 1614
+From DA to OKC: DA->MP->OKC Miles: 1741
+From DA to PHO: DA->NOLA->DC->MWK->PHO Miles: 4237
+From DA to SE: DA->LA->SF->SE Miles: 2658
+From DA to SF: DA->LA->SF Miles: 1854
+From DC to ATL: DC->ATL Miles: 663
+From DC to CHI: DC->NOLA->CHI Miles: 2086
+From DC to DA: DC->NOLA->DA Miles: 1655
+From DC to DC: -------------------- 
+From DC to LA: DC->NOLA->DA->LA Miles: 3095
+From DC to LV: DC->NOLA->DA->LA->LV Miles: 3367
+From DC to MIA: DC->NOLA->CHI->MIA Miles: 3509
+From DC to MP: DC->NY->MP Miles: 1454
+From DC to MWK: DC->MWK Miles: 811
+From DC to NOLA: DC->NOLA Miles: 1138
+From DC to NY: DC->NY Miles: 237
+From DC to OKC: DC->NY->MP->OKC Miles: 2246
+From DC to PHO: DC->MWK->PHO Miles: 2582
+From DC to SE: DC->MWK->SF->SE Miles: 3872
+From DC to SF: DC->MWK->SF Miles: 3068
+From LA to ATL: LA->DA->NOLA->ATL Miles: 2432
+From LA to CHI: LA->LV->CHI Miles: 2052
+From LA to DA: LA->DA Miles: 1440
+From LA to DC: LA->DA->NOLA->DC Miles: 3095
+From LA to LA: -------------------- 
+From LA to LV: LA->LV Miles: 272
+From LA to MIA: LA->LV->CHI->MIA Miles: 3475
+From LA to MP: LA->DA->MP Miles: 2389
+From LA to MWK: LA->SF->MWK Miles: 2671
+From LA to NOLA: LA->DA->NOLA Miles: 1957
+From LA to NY: LA->DA->NY Miles: 3054
+From LA to OKC: LA->DA->MP->OKC Miles: 3181
+From LA to PHO: LA->SF->MWK->PHO Miles: 4442
+From LA to SE: LA->SF->SE Miles: 1218
+From LA to SF: LA->SF Miles: 414
+From LV to ATL: LV->LA->DA->NOLA->ATL Miles: 2704
+From LV to CHI: LV->CHI Miles: 1780
+From LV to DA: LV->LA->DA Miles: 1712
+From LV to DC: LV->LA->DA->NOLA->DC Miles: 3367
+From LV to LA: LV->LA Miles: 272
+From LV to LV: -------------------- 
+From LV to MIA: LV->CHI->MIA Miles: 3203
+From LV to MP: LV->LA->DA->MP Miles: 2661
+From LV to MWK: LV->LA->SF->MWK Miles: 2943
+From LV to NOLA: LV->LA->DA->NOLA Miles: 2229
+From LV to NY: LV->LA->DA->NY Miles: 3326
+From LV to OKC: LV->LA->DA->MP->OKC Miles: 3453
+From LV to PHO: LV->LA->SF->MWK->PHO Miles: 4714
+From LV to SE: LV->LA->SF->SE Miles: 1490
+From LV to SF: LV->LA->SF Miles: 686
+From MIA to ATL: MIA->CHI->NOLA->ATL Miles: 2846
+From MIA to CHI: MIA->CHI Miles: 1423
+From MIA to DA: MIA->CHI->NOLA->DA Miles: 2888
+From MIA to DC: MIA->CHI->NOLA->DC Miles: 3509
+From MIA to LA: MIA->CHI->LV->LA Miles: 3475
+From MIA to LV: MIA->CHI->LV Miles: 3203
+From MIA to MIA: -------------------- 
+From MIA to MP: MIA->CHI->NOLA->DA->MP Miles: 3837
+From MIA to MWK: MIA->CHI->NOLA->DC->MWK Miles: 4320
+From MIA to NOLA: MIA->CHI->NOLA Miles: 2371
+From MIA to NY: MIA->CHI->NOLA->DC->NY Miles: 3746
+From MIA to OKC: MIA->CHI->NOLA->DA->MP->OKC Miles: 4629
+From MIA to PHO: MIA->PHO Miles: 5000
+From MIA to SE: MIA->CHI->SE Miles: 3483
+From MIA to SF: MIA->CHI->LV->LA->SF Miles: 3889
+From MP to ATL: MP->DA->NOLA->ATL Miles: 1941
+From MP to CHI: MP->DA->NOLA->CHI Miles: 2414
+From MP to DA: MP->DA Miles: 949
+From MP to DC: MP->NY->DC Miles: 1454
+From MP to LA: MP->DA->LA Miles: 2389
+From MP to LV: MP->DA->LA->LV Miles: 2661
+From MP to MIA: MP->DA->NOLA->CHI->MIA Miles: 3837
+From MP to MP: -------------------- 
+From MP to MWK: MP->NY->DC->MWK Miles: 2265
+From MP to NOLA: MP->DA->NOLA Miles: 1466
+From MP to NY: MP->NY Miles: 1217
+From MP to OKC: MP->OKC Miles: 792
+From MP to PHO: MP->NY->DC->MWK->PHO Miles: 4036
+From MP to SE: MP->DA->LA->SF->SE Miles: 3607
+From MP to SF: MP->DA->LA->SF Miles: 2803
+From MWK to ATL: MWK->DC->ATL Miles: 1474
+From MWK to CHI: MWK->DC->NOLA->CHI Miles: 2897
+From MWK to DA: MWK->DC->NOLA->DA Miles: 2466
+From MWK to DC: MWK->DC Miles: 811
+From MWK to LA: MWK->SF->LA Miles: 2671
+From MWK to LV: MWK->SF->LA->LV Miles: 2943
+From MWK to MIA: MWK->DC->NOLA->CHI->MIA Miles: 4320
+From MWK to MP: MWK->DC->NY->MP Miles: 2265
+From MWK to MWK: -------------------- 
+From MWK to NOLA: MWK->DC->NOLA Miles: 1949
+From MWK to NY: MWK->DC->NY Miles: 1048
+From MWK to OKC: MWK->DC->NY->MP->OKC Miles: 3057
+From MWK to PHO: MWK->PHO Miles: 1771
+From MWK to SE: MWK->SF->SE Miles: 3061
+From MWK to SF: MWK->SF Miles: 2257
+From NOLA to ATL: NOLA->ATL Miles: 475
+From NOLA to CHI: NOLA->CHI Miles: 948
+From NOLA to DA: NOLA->DA Miles: 517
+From NOLA to DC: NOLA->DC Miles: 1138
+From NOLA to LA: NOLA->DA->LA Miles: 1957
+From NOLA to LV: NOLA->DA->LA->LV Miles: 2229
+From NOLA to MIA: NOLA->CHI->MIA Miles: 2371
+From NOLA to MP: NOLA->DA->MP Miles: 1466
+From NOLA to MWK: NOLA->DC->MWK Miles: 1949
+From NOLA to NOLA: -------------------- 
+From NOLA to NY: NOLA->DC->NY Miles: 1375
+From NOLA to OKC: NOLA->DA->MP->OKC Miles: 2258
+From NOLA to PHO: NOLA->DC->MWK->PHO Miles: 3720
+From NOLA to SE: NOLA->CHI->SE Miles: 3008
+From NOLA to SF: NOLA->DA->LA->SF Miles: 2371
+From NY to ATL: NY->DC->ATL Miles: 900
+From NY to CHI: NY->DC->NOLA->CHI Miles: 2323
+From NY to DA: NY->DA Miles: 1614
+From NY to DC: NY->DC Miles: 237
+From NY to LA: NY->DA->LA Miles: 3054
+From NY to LV: NY->DA->LA->LV Miles: 3326
+From NY to MIA: NY->DC->NOLA->CHI->MIA Miles: 3746
+From NY to MP: NY->MP Miles: 1217
+From NY to MWK: NY->DC->MWK Miles: 1048
+From NY to NOLA: NY->DC->NOLA Miles: 1375
+From NY to NY: -------------------- 
+From NY to OKC: NY->MP->OKC Miles: 2009
+From NY to PHO: NY->DC->MWK->PHO Miles: 2819
+From NY to SE: NY->DC->MWK->SF->SE Miles: 4109
+From NY to SF: NY->DC->MWK->SF Miles: 3305
+From OKC to ATL: OKC->MP->DA->NOLA->ATL Miles: 2733
+From OKC to CHI: OKC->MP->DA->NOLA->CHI Miles: 3206
+From OKC to DA: OKC->MP->DA Miles: 1741
+From OKC to DC: OKC->MP->NY->DC Miles: 2246
+From OKC to LA: OKC->MP->DA->LA Miles: 3181
+From OKC to LV: OKC->MP->DA->LA->LV Miles: 3453
+From OKC to MIA: OKC->MP->DA->NOLA->CHI->MIA Miles: 4629
+From OKC to MP: OKC->MP Miles: 792
+From OKC to MWK: OKC->MP->NY->DC->MWK Miles: 3057
+From OKC to NOLA: OKC->MP->DA->NOLA Miles: 2258
+From OKC to NY: OKC->MP->NY Miles: 2009
+From OKC to OKC: -------------------- 
+From OKC to PHO: OKC->MP->NY->DC->MWK->PHO Miles: 4828
+From OKC to SE: OKC->MP->DA->LA->SF->SE Miles: 4399
+From OKC to SF: OKC->MP->DA->LA->SF Miles: 3595
+From PHO to ATL: PHO->MP->DA->NOLA->ATL Miles: 3712
+From PHO to CHI: PHO->MP->DA->NOLA->CHI Miles: 4185
+From PHO to DA: PHO->MP->DA Miles: 2720
+From PHO to DC: PHO->MP->NY->DC Miles: 3225
+From PHO to LA: PHO->MP->DA->LA Miles: 4160
+From PHO to LV: PHO->MP->DA->LA->LV Miles: 4432
+From PHO to MIA: PHO->MIA Miles: 5000
+From PHO to MP: PHO->MP Miles: 1771
+From PHO to MWK: PHO->MP->NY->DC->MWK Miles: 4036
+From PHO to NOLA: PHO->MP->DA->NOLA Miles: 3237
+From PHO to NY: PHO->MP->NY Miles: 2988
+From PHO to OKC: PHO->MP->OKC Miles: 2563
+From PHO to PHO: -------------------- 
+From PHO to SE: PHO->SE Miles: 5000
+From PHO to SF: PHO->MP->DA->LA->SF Miles: 4574
+From SE to ATL: SE->CHI->NOLA->ATL Miles: 3483
+From SE to CHI: SE->CHI Miles: 2060
+From SE to DA: SE->SF->LA->DA Miles: 2658
+From SE to DC: SE->SF->MWK->DC Miles: 3872
+From SE to LA: SE->SF->LA Miles: 1218
+From SE to LV: SE->SF->LA->LV Miles: 1490
+From SE to MIA: SE->CHI->MIA Miles: 3483
+From SE to MP: SE->SF->LA->DA->MP Miles: 3607
+From SE to MWK: SE->SF->MWK Miles: 3061
+From SE to NOLA: SE->CHI->NOLA Miles: 3008
+From SE to NY: SE->SF->MWK->DC->NY Miles: 4109
+From SE to OKC: SE->SF->LA->DA->MP->OKC Miles: 4399
+From SE to PHO: SE->SF->MWK->PHO Miles: 4832
+From SE to SE: -------------------- 
+From SE to SF: SE->SF Miles: 804
+From SF to ATL: SF->LA->DA->NOLA->ATL Miles: 2846
+From SF to CHI: SF->LA->LV->CHI Miles: 2466
+From SF to DA: SF->LA->DA Miles: 1854
+From SF to DC: SF->MWK->DC Miles: 3068
+From SF to LA: SF->LA Miles: 414
+From SF to LV: SF->LA->LV Miles: 686
+From SF to MIA: SF->LA->LV->CHI->MIA Miles: 3889
+From SF to MP: SF->LA->DA->MP Miles: 2803
+From SF to MWK: SF->MWK Miles: 2257
+From SF to NOLA: SF->LA->DA->NOLA Miles: 2371
+From SF to NY: SF->MWK->DC->NY Miles: 3305
+From SF to OKC: SF->LA->DA->MP->OKC Miles: 3595
+From SF to PHO: SF->MWK->PHO Miles: 4028
+From SF to SE: SF->SE Miles: 804
+From SF to SF: -------------------- 
+Aishas-MacBook-Pro:CIS346 aishajackson$ 

@@ -1,0 +1,42 @@
+//
+//  main.cpp
+//  GCD
+//
+//  Created by Aisha Jackson on 8/23/14.
+//  Copyright (c) 2014 Aisha Jackson. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+    int num1, num2;
+    int gcd;
+    
+    cout << "Please enter the first number." << endl; //enter the first number
+    cin >> num1;
+    
+    cout << "Please enter the second number." << endl; //enter the second number
+    cin >> num2;
+    
+    if (num2 < 0 || num1 < 0) {
+        cout << "Cannot divide by negative number." <<endl; //check for negative numbers
+    } else {
+        for(int k=1; k<=num1 && k<=num2; k++) //iterator cannot be greater than the two numbers
+        {
+            if(num1%k==0 && num2%k==0) //check to see if numbers divide by both of them and replaces previous GCD to find the largest one
+            {
+                gcd = k;
+            }
+        }
+        }
+    cout << "The Greatest Common Denominator is: " << gcd << endl; //output of the GCD
+    return 0;
+
+    }
+
+
+
+

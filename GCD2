@@ -1,0 +1,33 @@
+//
+//  GCD2.cpp
+//  
+//
+//  Created by Aisha Jackson on 8/23/14.
+//
+//
+
+#include <iostream>
+using namespace std;
+
+int gcd (int m, int n) //GCD function
+{
+    if (n == 0)
+        return m;
+    return gcd (n, m % n);
+}
+
+int main()
+{
+    int num1, num2;
+    
+    cout << "Please enter the first number. " << endl; //ask for number
+    cin >> num1;
+    
+    cout << "Please enter the second number. " << endl;//ask for number
+    cin >> num2;
+    
+    gcd(num1, num2); //call function
+    
+    cout << "The GCD is: " << gcd(num1, num2) << endl; //display GCD
+    return 0;
+}
